@@ -66,8 +66,60 @@ int main() {
     }
     printf("\n");
 
+    //Áreas de cone no tabuleiro
+
+    tabuleiro[4][7] = 5;
+    tabuleiro[5][6] = 5;
+    tabuleiro[5][7] = 5;
+    tabuleiro[5][8] = 5;
+    tabuleiro[6][5] = 5;
+    tabuleiro[6][6] = 5;
+    tabuleiro[6][7] = 5;
+    tabuleiro[6][8] = 5;
+    tabuleiro[6][9] = 5;
+    tabuleiro[6][10] = 5;
+    
+    //Áreas de cruz no tabuleiro
+
+    tabuleiro[0][7] = 5;
+    tabuleiro[1][5] = 5;
+    tabuleiro[1][6] = 5;
+    tabuleiro[1][7] = 5;
+    tabuleiro[1][8] = 5;
+    tabuleiro[1][9] = 5;
+    tabuleiro[2][7] = 5;
+
+
+    //Áreas de octaedro no tabuleiro
+
+    tabuleiro[6][1] = 5;
+    tabuleiro[7][1] = 5;
+    tabuleiro[7][2] = 5;
+    tabuleiro[8][1] = 5;
+
+   
+    
+    // Imprime o tabuleiro com os navios e áreas de habilidade
+
+    printf("   ");
+    for (int j = 0; j < 10; j++) {
+        printf(" %c ", linha[j]);
+    }
+    printf("\n");
+    for (int i = 0; i < 10; i++) {
+        printf("%2d|", i + 1); // Imprime o número da linha
+        for (int j = 0; j < 10; j++) {
+            printf(" %d ", tabuleiro[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+
+
+
     return 0;
 }
+
 
 
    
